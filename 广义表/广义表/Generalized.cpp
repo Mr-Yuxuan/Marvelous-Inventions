@@ -50,18 +50,25 @@ public:
 		_head = _Copy(g._head);
 
 	}
-	Generalized& operator=(const Generalized& g)
+	Generalized& operator=(Generalized g)
 	{
+		swap(_head, g._head);
+		return *this;
+	}
+	/*Generalized& operator=(const Generalized& g)
+	{
+
 		if (this != &g)
 		{
+			GeneralizeNode* tmp = _Copy(g._head);
 			if (_head)
 			{
 				_Destory(_head);
 			}
-			_head = _Copy(g._head);
+			_head = tmp;
 		}
 		return *this;
-	}
+	}*/
 	~Generalized()
 	{
 		_Destroy(_head);
