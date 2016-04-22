@@ -1,14 +1,14 @@
 ﻿  Binary.cpp
-f:\比特作业\二叉树\二叉树\binary.cpp(126): warning C4018: “<”: 有符号/无符号不匹配
-          f:\比特作业\二叉树\二叉树\binary.cpp(123): 编译类 模板 成员函数“BinaryNode<T> *BinaryTree<T>::_GreateTree(const T *,size_t,const T &,T &)”时
+f:\marvelous-inventions\二叉树\二叉树\binary.cpp(127): warning C4018: “<”: 有符号/无符号不匹配
+          f:\marvelous-inventions\二叉树\二叉树\binary.cpp(124): 编译类 模板 成员函数“BinaryNode<T> *BinaryTree<T>::_GreateTree(const T *,size_t,const T &,T &)”时
           with
           [
               T=int
           ]
-          f:\比特作业\二叉树\二叉树\binary.cpp(26): 参见对正在编译的函数 模板 实例化“BinaryNode<T> *BinaryTree<T>::_GreateTree(const T *,size_t,const T &,T &)”的引用
+          f:\marvelous-inventions\二叉树\二叉树\binary.cpp(27): 参见对正在编译的函数 模板 实例化“BinaryNode<T> *BinaryTree<T>::_GreateTree(const T *,size_t,const T &,T &)”的引用
           with
           [
               T=int
           ]
-          f:\比特作业\二叉树\二叉树\binary.cpp(233): 参见对正在编译的类 模板 实例化“BinaryTree<int>”的引用
-  二叉树.vcxproj -> F:\比特作业\二叉树\Debug\二叉树.exe
+          f:\marvelous-inventions\二叉树\二叉树\binary.cpp(231): 参见对正在编译的类 模板 实例化“BinaryTree<int>”的引用
+  二叉树.vcxproj -> F:\Marvelous-Inventions\二叉树\Debug\二叉树.exe

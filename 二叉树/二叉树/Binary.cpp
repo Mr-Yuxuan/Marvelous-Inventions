@@ -1,4 +1,5 @@
 #include<iostream>
+#include<queue>
 using namespace std;
 template<class T>
 struct BinaryNode
@@ -174,24 +175,21 @@ protected:
 		}
 	}
 	//层序遍历
-	//void _LevelOder(BinaryNode<T>* root)
-	//{
-	//	if (root == NULL)
-	//	{
-	//		return;
-	//	}
-	//	else
-	//	{
-	//		cout << root->_data << ' ';
-	//	
-	//		_LevelOder(root->_left);
-	//		if (root->_right)
-	//		{
-	//			cout << root->_right->_data << ' ';
-	//		}
-	//		
-	//	}
-	//}
+	void _LevelOder(BinaryNode<T>* root)
+	{
+		queue<BinaryNode<T>*> q;
+		q.push(root);
+		while (q.size())
+		{
+			BinaryNode<T>* tmp = q.front();
+			cout << tmp->_data << ' ';
+			q.pop();
+			if (tmp->_left)
+				q.push(tmp->_left);
+			if (tmp->_right)
+				q.push(tmp->_right);
+		}
+	}
 	size_t _Size(BinaryNode<T>* root)  //树的大小
 	{
 		if (root == NULL)
@@ -234,7 +232,7 @@ int main()
 	b1.PrevOder();
 	b1.InOder();
 	b1.PostOder();
-	/*b1.LevelOder();*/
+	b1.LevelOder();
 	cout <<"LeafSize:"<< b1.LeafSize() << endl;
 	cout <<"Size:"<< b1.Size() << endl;
 	cout <<"Depth:"<< b1.Depth() << endl;
