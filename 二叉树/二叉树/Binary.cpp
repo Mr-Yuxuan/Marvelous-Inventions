@@ -211,16 +211,19 @@ protected:
 		stack<BinaryNode<T>*> s;
 		s.push(root);
 		BinaryNode<T>* cur = root;
+		BinaryNode<T>* per = NULL;
 		while (!s.empty())
 		{
-			while (cur->_left)
+			while ((cur->_left)&&(cur!=per))
 			{
 				s.push(cur->_left);
 				cur = cur->_left;
 			}
 			cur = s.top();
 			cout << cur->_data << ' ';
+			per = cur;
 			s.pop();
+			
 			if (cur->_right)
 			{
 				s.push(cur->_right);
@@ -236,7 +239,7 @@ protected:
 		}
 		stack<BinaryNode<T>*> s;
 		BinaryNode<T>* cur = root;
-		BinaryNode<T>* pre = NULL;
+		BinaryNode<T>* pre = root;
 		s.push(root);
 		while (!s.empty())
 		{
@@ -320,7 +323,7 @@ private:
 };
 int main()
 {
-	int c[21] = { 1, 2, '#', 3, '#', '#', 4, 5, '#', 6, '#', 7, '#', '#', 8,9,'#','#',10,'#','#' };
+	int c[21] = { 1, 2, '#', 3, '#', '#', 4, 5, '#', 6, '#', 7, '#', '#', 8, 9, '#', '#', 10, '#', '#' };
 	BinaryTree<int> b1(c,21, '#');
 	b1.PrevOder();
 	b1.InOder();

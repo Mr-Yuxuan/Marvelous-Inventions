@@ -10,5 +10,6 @@ f:\marvelous-inventions\二叉树\二叉树\binary.cpp(131): warning C4018: “<
           [
               T=int
           ]
-          f:\marvelous-inventions\二叉树\二叉树\binary.cpp(324): 参见对正在编译的类 模板 实例化“BinaryTree<int>”的引用
+          f:\marvelous-inventions\二叉树\二叉树\binary.cpp(327): 参见对正在编译的类 模板 实例化“BinaryTree<int>”的引用
+cl : 命令行 warning D9028: 最小重新生成失败，正在转换为标准生成
   二叉树.vcxproj -> F:\Marvelous-Inventions\二叉树\Debug\二叉树.exe
