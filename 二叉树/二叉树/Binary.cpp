@@ -1,5 +1,6 @@
 #include<iostream>
 #include<queue>
+#include<stack>
 using namespace std;
 template<class T>
 struct BinaryNode
@@ -37,17 +38,20 @@ public:
 	}
 	void PrevOder()
 	{
-		_PrevOder(_root);
+		/*_PrevOder(_root);*/
+		_PrevOder_NonR(_root);
 		cout << endl;
 	}
 	void InOder()
 	{
-		_InOder(_root);
+		/*_InOder(_root);*/
+		_InOder_NoR(_root);
 		cout << endl;
 	}
 	void PostOder()
 	{
-		_PostOder(_root);
+		/*_PostOder(_root);*/
+		_PostOder_NoR(_root);
 		cout << endl;
 	}
 	void LevelOder()
@@ -173,6 +177,95 @@ protected:
 			_PostOder(root->_right);
 			cout << root->_data << ' ';
 		}
+	}
+	void _PrevOder_NonR(BinaryNode<T>* root)//前序遍历（非递归）
+	{
+		if (root == NULL)
+		{
+			return;
+		}
+		stack<BinaryNode<T>*> s;
+		s.push(root);
+		
+		while (!s.empty())
+		{
+			BinaryNode<T>* tmp = s.top();
+			s.pop();
+			cout << tmp->_data << ' ';
+			if (tmp->_right)
+			{
+				s.push(tmp->_right);
+			}
+			if (tmp->_left)
+			{
+				s.push(tmp->_left);
+			}
+		}
+	}
+	void _InOder_NoR(BinaryNode<T>* root)//中序遍历（非递归）
+	{
+		if (root == NULL)
+		{
+			return;
+		}
+		stack<BinaryNode<T>*> s;
+		s.push(root);
+		BinaryNode<T>* cur = root;
+		while (!s.empty())
+		{
+			while (cur->_left)
+			{
+				s.push(cur->_left);
+				cur = cur->_left;
+			}
+			cur = s.top();
+			cout << cur->_data << ' ';
+			s.pop();
+			if (cur->_right)
+			{
+				s.push(cur->_right);
+				cur = cur->_right;
+			}
+		}
+	}
+	void _PostOder_NoR(BinaryNode<T>* root)//后序遍历（非递归）
+	{
+		if (root == NULL)
+		{
+			return;
+		}
+		stack<BinaryNode<T>*> s;
+		BinaryNode<T>* cur = root;
+		BinaryNode<T>* pre = NULL;
+		s.push(root);
+		while (!s.empty())
+		{
+			
+			while ((cur->_left)&&(cur->_left!=pre))
+			{
+				if (cur->_right == pre)
+					break;
+				s.push(cur->_left);
+				cur = cur->_left;
+			}
+			if ((cur->_right)&&(cur->_right!=pre))
+			{
+				s.push(cur->_right);
+				cur = cur->_right;
+			}
+			if ((cur->_left == NULL&&cur->_right == NULL) || (cur->_left == pre || cur->_right == pre))
+			{
+				
+				cout << cur->_data << ' ';
+				pre = cur;
+				s.pop();
+				if (s.size())
+				{
+					cur = s.top();
+				}
+			}
+		}
+
 	}
 	//层序遍历
 	void _LevelOder(BinaryNode<T>* root)
