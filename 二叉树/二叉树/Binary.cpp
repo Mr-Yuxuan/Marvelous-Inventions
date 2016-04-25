@@ -71,11 +71,50 @@ public:
 	{
 		return _LeafSize(_root);
 	}
+	BinaryNode<T>* Find(const T& d)
+	{
+		BinaryNode<T>*cur = NULL;
+		_Find(_root, d,cur);
+		return cur;
+	}
+	size_t TreeNodeOfK(size_t k)
+	{
+		size_t n = 0;
+		_TreeNodeOfK(_root, k,n);
+		return n;
+	}
 	~BinaryTree()
 	{
 		_Destory(_root);
 	}
 protected:
+	//统计k层结点数
+	void _TreeNodeOfK(BinaryNode<T>* root, size_t k,size_t& n)
+	{
+		if (root == NULL)
+			return;
+		if (k == 1)
+		{
+			n += 1;
+			return;
+		}
+		_TreeNodeOfK(root->_left, k-1, n);
+		_TreeNodeOfK(root->_right, k-1, n);
+	}
+	//查找结点
+	void _Find(BinaryNode<T>* root, const T& d,BinaryNode<T>*& cur)
+	{
+		if (root == NULL)
+			return;
+		if (root->_data == d)
+		{
+			cur = root;
+			return;
+		}
+		_Find(root->_left, d, cur);
+		_Find(root->_right, d, cur);
+	
+	}
 	//叶子节点的数目
 	size_t _LeafSize(BinaryNode<T>* root)
 	{
@@ -325,7 +364,7 @@ int main()
 {
 	int c[21] = { 1, 2, '#', 3, '#', '#', 4, 5, '#', 6, '#', 7, '#', '#', 8, 9, '#', '#', 10, '#', '#' };
 	BinaryTree<int> b1(c,21, '#');
-	b1.PrevOder();
+	/*b1.PrevOder();
 	b1.InOder();
 	b1.PostOder();
 	b1.LevelOder();
@@ -336,7 +375,9 @@ int main()
 	b2.PrevOder();
 	BinaryTree<int> b3;
 	b3 = b1;
-	b3.PrevOder();
+	b3.PrevOder();*/
+	cout << b1.Find(5)->_data << endl;
+	cout << b1.TreeNodeOfK(5) << endl;
 	system("pause");
 	return 0;
 
