@@ -91,6 +91,7 @@ public:
 	void Push(const T& d)
 	{
 		s1.Push(d);
+		return;
 	}
 	void Pop()
 	{
