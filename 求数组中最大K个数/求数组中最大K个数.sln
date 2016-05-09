@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "求数组中最大K个数", "求数组中最大K个数\求数组中最大K个数.vcxproj", "{E1C783BA-A30F-45AB-8B4D-AA1BEDA7AD64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1C783BA-A30F-45AB-8B4D-AA1BEDA7AD64}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E1C783BA-A30F-45AB-8B4D-AA1BEDA7AD64}.Debug|Win32.Build.0 = Debug|Win32
+		{E1C783BA-A30F-45AB-8B4D-AA1BEDA7AD64}.Release|Win32.ActiveCfg = Release|Win32
+		{E1C783BA-A30F-45AB-8B4D-AA1BEDA7AD64}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
