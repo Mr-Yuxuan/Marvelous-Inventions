@@ -1,0 +1,3 @@
+﻿  BigDataReverse.cpp
+f:\作业\bigdata\bigdata\bigdatareverse.cpp(172): warning C4715: “BigData::IsOvOfMul”: 不是所有的控件路径都返回值
+  BigData.vcxproj -> F:\作业\BigData\Debug\BigData.exe
