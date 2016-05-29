@@ -1,0 +1,3 @@
+﻿  3_7.cpp
+f:\比特作业\project32\project32\3_7.cpp(136): warning C4715: “String::operator<”: 不是所有的控件路径都返回值
+  Project32.vcxproj -> F:\比特作业\Project32\Debug\Project32.exe
