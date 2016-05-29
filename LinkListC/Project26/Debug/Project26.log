@@ -1,0 +1,4 @@
+﻿  texxt.c
+f:\比特作业\project26\project26\texxt.c(65): warning C4101: “pos”: 未引用的局部变量
+f:\比特作业\project26\project26\texxt.c(147): warning C4101: “pos”: 未引用的局部变量
+  Project26.vcxproj -> F:\比特作业\Project26\Debug\Project26.exe
