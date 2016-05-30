@@ -1,0 +1,5 @@
+﻿  test.cpp
+f:\作业\bitmapandbloomfilter\bitmapandbloomfilter\bitmap.hpp(34): warning C4244: “参数”: 从“__int64”转换到“unsigned int”，可能丢失数据
+f:\作业\bitmapandbloomfilter\bitmapandbloomfilter\boolmfilter.hpp(87): warning C4244: “初始化”: 从“__int64”转换到“size_t”，可能丢失数据
+f:\作业\bitmapandbloomfilter\bitmapandbloomfilter\bitmap.hpp(23): warning C4715: “GetNextPrime”: 不是所有的控件路径都返回值
+  BitMapAndBloomFilter.vcxproj -> F:\作业\BitMapAndBloomFilter\Debug\BitMapAndBloomFilter.exe
