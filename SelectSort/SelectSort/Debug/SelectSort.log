@@ -1,0 +1,3 @@
+﻿  SelectSort.cpp
+f:\作业\selectsort\selectsort\selectsort.cpp(12): warning C4018: “<=”: 有符号/无符号不匹配
+  SelectSort.vcxproj -> F:\作业\SelectSort\Debug\SelectSort.exe
