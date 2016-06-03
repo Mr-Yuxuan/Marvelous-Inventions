@@ -312,6 +312,8 @@ protected:
 	//层序遍历
 	void _LevelOder(BinaryNode<T>* root)
 	{
+		if (root == NULL)
+			return;
 		queue<BinaryNode<T>*> q;
 		q.push(root);
 		while (q.size())
@@ -324,6 +326,7 @@ protected:
 			if (tmp->_right)
 				q.push(tmp->_right);
 		}
+		return;
 	}
 	size_t _Size(BinaryNode<T>* root)  //树的大小
 	{
