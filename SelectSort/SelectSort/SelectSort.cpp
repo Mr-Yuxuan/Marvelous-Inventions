@@ -56,8 +56,8 @@ void SelectSortII(int *a, size_t n)
 }
 int main()
 {
-	int a[] = {  4, 6, 3, 8, 2, 4,  7, 7,1,0 };
-	SelectSort(a, 10);
+	int a[] = {  9, 6, 3, 8, 2, 4,  7, 7,1,5 };
+	/*SelectSort(a, 10);*/
 	SelectSortII(a, 10);
 	system("pause");
     return 0;
