@@ -1,0 +1,3 @@
+﻿  CountSort.cpp
+f:\作业\countsort\countsort\countsort.cpp(35): warning C4018: “<”: 有符号/无符号不匹配
+  CountSort.vcxproj -> F:\作业\CountSort\Debug\CountSort.exe
