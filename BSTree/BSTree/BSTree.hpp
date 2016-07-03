@@ -228,23 +228,27 @@ protected:
 			if (root->_left == NULL)
 			{
 				root = root->_right;
+				delete cur;
 			}
 			else if (root->_right==NULL)
 			{
 				root = root->_left;
+				delete cur;
 			}
 			else
 			{
 				Node* subL = cur->_right;
 				while (subL->_left)
 				{
-					root = subL;
+					cur = subL;
 					subL = subL->_left;
 				}
-				swap(cur, subL);
-				root->_left = cur->_right;
+				root->_key = subL->_key;
+				root->_value = subL->_value;
+				cur->_left = subL->_right;
+				delete subL;
 			}
-			delete cur;
+			
 			return true;
 		}
 		if (root->_key > key)
