@@ -1,0 +1,6 @@
+if ((cur->_left == NULL) && (cur->_right == NULL))
+				{
+					fputc(cur->_weight._ch, fucc);
+					count--;
+					cur = _hu._root;
+				}
